@@ -1,0 +1,44 @@
+//página html com exemplos de todas as tags do html apresentadas nos Slides 2 e 3//
+
+<!DOCTYPE html>
+
+<html lang=" =pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title> A3 </title>
+</head>
+<body>
+    <h1>Atividade 3 de Aplicações Web</h1>
+    <p>Baseado nos slides sobre tabelas e formatos de texto</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Formato de texto html</th>
+                <th>O que ele faz</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>nenhum</td>
+                <td>texto normal</td>
+            </tr>
+            <tr>
+                <td>"< b >"</td>
+                <td><b>texto em negrito</b></td>
+            </tr>
+            <tr>
+                <td>"< i >"</td>
+                <td><i>texto em itálico</i></td>
+            </tr>
+            <tr>
+                <td>"< mark >"</td>
+                <td><mark>texto marcado</mark></td>
+            </tr>
+            <tr>
+                <td>"< small >"</td>
+                <td><small>texto pequenino</small></td>
+        </tbody>
+    </table>
+
+</body>
+</html>
