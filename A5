@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="formsicon.ico" />
+    <title>A5</title>
+</head>
+<body>
+    <code>
+        <h1>Cadastro de dados Pessoais</h1>
+        <form>
+            <fieldset>
+                <legend>Informações de Login:</legend>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="fnome" name="nome"><br>
+                <label for="snome">Sobrenome: </label><br>
+                <input type="text" id="snome" name="snome" />
+                <div>
+                    <label for="email">E-mail: </label><br>
+                    <input type="email" id="email" name="email" autofocus/>
+                </div>
+            </fieldset>
+            <p>Faixa etária:</p>
+            <select id="faixa" name="nfaixa">
+                <option value="-">-</option>
+                <option value="jovem">Até 19 anos</option>
+                <option value="adulto">Entre 20 e 40 anos</option>
+                <option value="velho">De 40 anos em diante</option>
+            </select>
+            <div>
+                <p>Selecione o Estado em que Reside:</p>
+                <input list="estado">
+                <datalist id="estado">
+                    <option value="AC">
+                    <option value="AL">
+                    <option value="AP">
+                    <option value="AM">
+                    <option value="BA">
+                    <option value="CE">
+                    <option value="DF">
+                    <option value="ES">
+                    <option value="GO">
+                    <option value="MA">
+                    <option value="MT">
+                    <option value="MS">
+                    <option value="MG">
+                    <option value="PA">
+                    <option value="PB">
+                    <option value="PR">
+                    <option value="PE">
+                    <option value="PI">
+                    <option value="RJ">
+                    <option value="RN">
+                    <option value="RS">
+                    <option value="RO">
+                    <option value="RR">
+                    <option value="SC">
+                    <option value="SP">
+                    <option value="SE">
+                    <option value="TO">
+                </datalist>
+            </div>
+
+            <div>
+                <p>Sexo:</p>
+                <input type="radio" name="sexo" value="fem" />Feminino
+                <input type="radio" name="sexo" value="msc" />Masculino
+            </div>
+            
+            <div><textarea name="texto" rows="5" cols="50">Adicione alguma forma de contato</textarea> </div>
+           
+            <h3>
+                Formulário usado com as tags:
+            </h3>
+                <ul>
+                    <li>fieldset</li>
+                    <li>legend</li>
+                    <li>label</li>
+                    <li>input</li>
+                    <li>select</li>
+                    <li>datalist</li>
+                    <li>textarea</li>
+                    <li>autofocus</li>
+                </ul>
+            
+    </code>
+    </form>
+</body>
+</html>
