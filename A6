@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/*Azul: rgb (10, 29, 55)
+pessego: rgb (255, 216, 204)
+rosinha: rgb (255, 216, 204)
+bege: rgb(255,238,219)*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color:rgb(253, 214, 182) ;
+}
+
+#header{
+    font-size: 2rem;
+    background-color: rgb(10, 29, 55);
+    margin:auto;
+    padding: 20px ;
+}
+
+.logo span{
+    color: rgb(204, 116, 89) ;
+}
+
+.logo{
+    color:white;
+}
+
+.menu{
+    color:rgb(255,238,219);
+    border-radius: 20%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background-color: rgba(17, 45, 85, 0.329) ;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+nav{
+    display: flex ;
+    height: 4.5rem;
+    padding-right: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img{
+    width: 80%;
+}
+
+h1{
+    font: 700 2rem 'Roboto', sans-serif;
+    color: rgb(10, 29, 55);
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    padding-bottom: 1.5rem;
+    font: italic 200 1rem  'Roboto', sans-serif;
+}
+
+.button{
+    color: white;
+    background-color: rgb(10, 29, 55);
+    display: inline-flex;
+    height: 4rem;
+    align-items: center;
+    padding:  0 5rem;
+    border-radius: 4px;
+    font: italic 200 1rem  'Roboto', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.button:hover{
+    background-color: rgba(10, 29, 55, 0.89);
+}
+
+section{
+    padding: 2rem 0;
+}
+
+#home .container{
+    margin: 10%;
+}
+
+#home .text {
+    margin:  4rem 1.5rem ;
+    width: 100%;
+    text-align: center;
+}
+
+#home .image img{
+    position:  relative;
+    right: 1.5rem;
+    top: 1rem;
+    border-radius: 6%;
+}
+
+#home .image{
+    position: relative; 
+}
+
+#home .image::before{
+    content: '' ;
+    height: 100%;
+    width: 90%;
+    background-color: rgb(204, 116, 89);
+    position: absolute;
+    top: -2rem;
+    z-index: 0;
+    border-radius: 6% ;
+}
+
+.divider-1{
+    height: 5px;
+    background: linear-gradient(
+        270deg,
+        rgba(236, 221, 221, 0.842) 0%,
+        rgb(206, 95, 95) 200%
+    );
+}
+
+#out{
+    text-align: right;
+}
