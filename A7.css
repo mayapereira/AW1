@@ -1,0 +1,336 @@
+@charset "UTF-8";
+
+/***************LAYOUT****************/
+
+:root{
+    --cortxt: rgb(10, 29, 55);
+    --corbkg: rgb(253, 214, 182);
+    --cordest: rgb(204, 116, 89);
+    --headheight: 4rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 2rem;
+}
+
+.section{
+    padding: 5rem 0;
+}
+
+.section .title{
+    margin-bottom: 1rem;
+}
+
+.section header {
+    margin-bottom: 4rem;
+}
+
+.section header strong{
+    color: var(--cordest);
+}
+
+.divider-1{
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        rgba(236, 221, 221, 0.842) 0%,
+        rgb(206, 95, 95) 200%
+    );
+}
+
+body{
+    font:  400 1rem 'Roboto', sans-serif;
+    background-color:var(--corbkg);
+}
+
+
+/***************CABEÇALHO****************/
+
+#header{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(255,238,219);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--corbkg);
+}
+
+#header.scroll {
+    box-shadow: 0px 0px 12px rgba(0,0,0,1);
+}
+
+.logo span{
+    color: var(--cordest);
+}
+
+.logo{
+    color:white;
+    font: 700 2rem 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    height: 4.5rem;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+nav.show ul.grid{
+    gap: 4rem;
+}
+
+nav ul li{
+    text-align: center;
+}
+
+nav ul li a{
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav ul li a:hover{
+    color: var(--cordest);
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--cordest);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav .menu{
+    opacity: 0;
+    visibility: hidden;
+
+    top: -20rem;
+    transition: 0.2s;
+}
+
+nav.show .menu ul{
+    display: grid;
+}
+
+nav .menu ul{
+    display: none;
+}
+
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+
+    background-color: var(--corbkg);
+    height: 100vh;
+    width: 100vw;
+
+    position:fixed;
+    left: 0;
+    top: 0;
+
+    display: grid;
+    place-content: center;
+}
+
+nav.show .icon-close{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    right: 1.5rem;
+
+    top: 1.5rem;
+}
+
+nav .icon-close{
+    visibility: hidden;
+    transition: 0.2s;
+    top: -1.5rem;
+}
+
+.toggle{
+    color: var(--cordest);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/***************BODY***************/
+
+main{
+    margin-top: calc(var(--headheight) + 2rem);
+}
+
+.title{
+    font: 700 2rem 'Roboto', sans-serif;
+    color: var(--cortxt);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    text-align: justify;
+    padding-bottom: 1.5rem;
+    font: italic 200 1rem  'Roboto', sans-serif;
+}
+
+.button{
+    color: white;
+    background-color: var(--cortxt);
+    display: inline-flex;
+    height: 4rem;
+    align-items: center;
+    padding:  0 2rem;
+    border-radius: 3px;
+    font: italic 200 1rem  'Roboto', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.button:hover{
+    background-color: rgba(10, 29, 55, 0.89);
+}
+
+/***************HOM3***************/
+
+#home{
+    overflow: hidden;
+}
+
+#home .container{
+    margin: 0;
+}
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+#home .image img{
+    position: relative;
+    right: 3rem;
+    border-radius: 3px;
+}
+
+#home .image{
+    position: relative; 
+}
+
+#home .image::before{
+    content: '' ;
+    height: 100%;
+    width: 1000px;
+    background-color: rgb(204, 116, 89);
+    position: absolute;
+    top: -3rem;
+    left: 3rem;
+    right: auto;
+    z-index: 0;
+    border-radius: 3px;
+}
+
+/***************ABOUT***************/
+
+#about{
+    overflow: hidden;
+}
+
+#about .container{
+    margin: 0;
+}
+
+#about .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: justify;
+}
+
+#about .title{
+    text-align: justify;
+}
+
+#about .image img{
+    position: relative;
+    margin-right: 0;
+    border-radius: 3px;
+    
+}
+
+#about .image{
+    position: relative; 
+    margin-right: 0;
+}
+
+#about .image::before{
+    content: '';
+    height: 5rem;
+    width: 100%;
+    background-color: rgb(204, 116, 89);
+    position: absolute;
+    margin-left: 0;
+    padding-left: 0;
+    top: -8%;
+    left: -33%;
+    z-index: 0;
+    border-radius: 3px;
+}
+
+/***************SERVICES***************/
+
+.cards .grid{
+    gap: 1.5rem;
+}
+
+.card{
+    padding: 3.6rem 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 0.25rem solid var(--cordest);
+}
+
+.card i{
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    color: var(--cortxt);
+    text-align: center;
+}
+
+.card .title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
