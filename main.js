@@ -1,31 +1,60 @@
-const menu = document.querySelector('#header nav')
-const bot = document.querySelectorAll('nav .toggle')
+// pegar todas teclas//
 
-for(const elemento of bot){
-    elemento.addEventListener('click', function(){
-        menu.classList.toggle('show')
-    })
+const keys = document.querySelectorAll('.key')
+
+function playNote(event) {
+  let audioKeyCode = getKeyCode(event)
+
+  // tecla digitada ou pressionada
+  const key = document.querySelector(`.key[data-key="${audioKeyCode}"]`)
+  //se tecla existe
+  const cantFoundAnyKey = !key
+
+  if (cantFoundAnyKey) {
+    return
+  }
+
+  playAudio(audioKeyCode)
 }
 
-const links = document.querySelectorAll('nav ul li a')
+function addPlayingClass(key) {
+  key.classList.add('playing')
+}
 
-    for(const e of links){
-        e.addEventListener('click', function() {
-            menu.classList.remove('show')
-        })
-    }
+function getKeyCode(event) {
+  let keyCode
 
-    /* sombra header */
+  const isKeyboard = event.type === 'keydown'
+  if (isKeyboard) {
+    keyCode = event.keyCode
+  } else {
+    keyCode = event.target.dataset.key
+  }
 
-const header = document.querySelector('header')
-const h = header.offsetHeight
+  return keyCode
+}
 
-window.addEventListener('scroll', function(){
-    if(window.scrollY >= h){
-        header.classList.add('scroll')
-    }
-    
-    else{
-        header.classList.remove('scroll')
-    }
-})
+function playAudio(audioKeyCode) {
+  const audio = document.querySelector(`audio[data-key="${audioKeyCode}"]`)
+  audio.currentTime = 0
+  audio.play()
+}
+
+function removePlayingClass(event) {
+  event.target.classList.remove('playing')
+}
+
+function registerEvents() {
+  //clicar com mouse//
+
+  keys.forEach(function (key) {
+    key.addEventListener('click', playNote)
+    key.addEventListener('transitionend', removePlayingClass)
+  })
+
+  // digitar no teclado//
+
+  window.addEventListener('keydown', playNote)
+}
+
+window.addEventListener('load', registerEvents)
