@@ -1,0 +1,86 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.v {
+    font-family: Poppins;
+    font-style: medium;
+    color: rgb(216, 3, 3);
+}
+
+.r{
+    font-family: Poppins;
+    font-style: medium;
+    color: black; 
+}
+
+h3 {
+    font-family: Poppins;
+    font-style: medium;
+    color: rgb(107, 106, 106);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin: 5rem 0 1rem 0;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ #artist, #song {
+    padding: 0.7rem;
+    border: none;
+    margin: 2rem 2rem 2rem 0;
+    background-color: rgb(209, 209, 209);
+    width: 15rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.input {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buscar {
+    font-family: Poppins;
+    font-style: medium;
+    color: white;
+    background-color: rgb(216, 3, 3);
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.buscar:hover{
+    background-color: rgba(216, 3, 3, 0.7);
+}
+
+#lyrics {
+    display: flex;
+    justify-content: center;
+}
