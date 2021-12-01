@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLzSong's</title>
+</head>
+
+<!--STYLES--> 
+<link rel = "stylesheet" href="style19.css">
+
+<!--FONTS--> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<body> 
+    <div class="title">
+        <h2 class="v">May</h2><h2 class="r">outube</h2>
+    </div>
+    <h3>Tipo o youtube, mas sem os vídeos, só as letras!</h3>
+
+    <form class="form"> 
+        <div class="artist">
+            <label for="artist"></label>
+        <input type="text" id="artist" placeholder="Cantor/Banda">
+</div>
+<div class="song">
+    <label for="song"></label>
+    <input type="text" id="song" placeholder="Música">
+</div>
+    <button type="submit" class="buscar">BUSCAR</button>
+</form>
+
+
+
+<pre id="lyrics"></pre>
+</div>
+</body>
+<script src="./index19.js"></script>
+</html>
